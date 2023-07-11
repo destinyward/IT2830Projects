@@ -1,0 +1,107 @@
+﻿using System;
+using System.IO;
+using System.Text;
+
+namespace Document_Merger
+{
+    class Program
+    {
+        static void runOnce()
+        {
+            Console.WriteLine("Document Merger");
+            Console.WriteLine();
+
+            String first = "";
+            String second = "";
+            bool firstPrompt = true;
+            do
+            {
+                if(firstPrompt)
+                {
+                    firstPrompt = false;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Filename.");
+                }
+                Console.WriteLine("Enter the name of the first text file to be merged:");
+                first = Console.ReadLine();
+            }
+            while (first.Length > 0 && !File.Exists(first));
+
+            firstPrompt = true;
+
+            do
+            {
+                if(firstPrompt)
+            {
+                firstPrompt = false;
+            }
+            else
+            {
+                Console.WriteLine("Invalid Filename.");
+            }
+            Console.WriteLine("Enter the name of the second text file to be merged:");
+            second = Console.ReadLine();
+            }
+            while (second.Length > 0 && !File.Exists(second));
+
+            String merged = first.Substring(0, first.Length-4)+second.Substring(0, second.Length-4)+".txt";
+
+            StreamWriter streamw = null;
+            StreamReader streamr1 = null;
+            StreamReader streamr2 = null;
+
+            bool successful = false;
+            
+            int count = 0;
+            
+            try
+            {
+                streamw = new StreamWriter(merged);
+                streamr1 = new StreamReader(first);
+                streamr2 = new StreamReader(second);
+
+                String line = streamr1.ReadLine();
+                while(line!= null)
+            {
+                streamw.WriteLine(line);
+                count+=line.Length;
+                line = streamr2.ReadLine();
+            }    
+            successful = true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if(streamw!=null)
+                streamw.Close();
+
+                if(streamr1!=null)
+                streamr1.Close();
+
+                if(streamr2!=null)
+                streamr2.Close();
+
+                if(successful)
+                Console.WriteLine(merged + "was successfully saved. The document contains "+count+" characters.");
+            }
+        }
+        static void Main(string[] args)
+        {
+            do
+        {
+            runOnce();
+            Console.WriteLine("Would you like to merge two more files? (Y/N)");
+            char a = Console.ReadLine()[0];
+
+            if (a=='n')
+            break;
+        }
+        while (true);
+        }
+    }
+}

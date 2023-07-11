@@ -1,0 +1,280 @@
+<!-- 
+    Name: Destiny Ward
+     Pawprint: Dmwqmf
+     Date: Febuary 6, 2021
+     Challenge: Multi-Column Layout S21
+-->
+<!DOCTYPE html>
+
+<!-- 
+    References: 
+        1) Hide scrollbar
+           https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+        2) CSS box model
+           https://www.w3schools.com/css/css_boxmodel.asp
+        3) CSS horizontal navigation bar
+           https://www.w3schools.com/css/css_navbar_horizontal.asp
+        4) clearHack
+           https://css-tricks.com/snippets/css/clear-fix/
+        5) Float left
+           https://www.w3schools.com/css/css_float.asp
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skills</title>
+        <style>
+            body {
+                overflow-x: hidden;
+                font-family: Arial, Helventica, sans-serif;
+                text-align: center;
+            } 
+            
+            #navBar{
+                background-color: darkgoldenrod;
+                overflow: hidden;
+                width: 110%;
+                margin-top: -10px;
+                margin-right: 10px;
+                margin-left: -10px;
+            }
+
+            .ulNavList{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: darkgoldenrod;
+            }
+
+            .navList{
+                float: left;
+            }
+
+            .navList a{
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                font-family: Arial, Helventica, sans-serif;
+            }
+            
+            .navItems a{
+                display: block;
+                color: black;
+                text-align: left;
+                padding: 20px 20px;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: Arial, Helventica, sans-serif;
+            }
+            
+            headerSkills {
+                text-align: center;
+            }
+            
+            /* 
+            left + middle + right (physical width) = main wrapper content width
+               right = main - left - middle
+               1122px -> main wrapper content width
+              - 340px -> left column physical width
+              - 477px -> middle column physical width
+            -------------------------------------------
+              = 305px -> right physical width
+            
+                305px -> right physical width
+               - 42px -> padding (21px left, 21px right)
+               - 12px -> border (6px left, 6px right)
+               - 42px -> margin (21px left, 21px right)
+            -------------------------------------------
+              = 209px -> right content width
+            */
+            
+            #mainWrapper {
+                text-align: center;
+                width: 1122px;
+                border: 9px solid black;
+                border-radius: 50px;
+                padding: 10px;
+                
+                margin: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: silver;
+            }
+            
+            .leftColumn {
+                border: 6px solid black;
+                background-color: darkgoldenrod;
+                width: 244px;
+                padding: 21px;
+                margin: 21px;
+                border-radius: 20px;
+                height: 425px;
+                text-align: left;
+                
+                float: left;
+            }
+            
+            .rightColumn {
+                width: 209px;
+                padding: 21px;
+                margin: 21px;
+                height: 425px;
+                border: 6px solid black;
+                border-radius: 20px;
+                background-color: darkgoldenrod;
+                text-align: left;
+                
+                float: left;
+            }
+            
+            .rowWrapper {
+                width: 435px;
+                margin: 21px;
+                
+                float: left;
+            }
+            
+            .topRow {
+                width: 376px;
+                height: 211px;
+                padding: 22px;
+                border: 6px solid black;
+                border-radius: 20px;
+                
+                background-color: darkgoldenrod;
+                text-align: left;
+                
+                float: left;
+            }
+            
+            .bottomRow {
+                width: 376px;
+                height: 130px;
+                padding: 22px;
+                border: 6px solid black;
+                border-radius: 20px;
+                
+                margin-top: 26px;
+                background-color: darkgoldenrod;
+                text-align: left;
+                
+                float: left;
+            }
+            
+            hr {
+                border-top: 2px solid black;
+            }
+            
+            .clearHack:after{
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+        </style>
+    </head>
+    <body>
+        <div id="navBar"> 
+            <ul class="ulNavList">
+                <li class="navList"><a href="DmwqmfPortfolioS21.html">Destiny Ward</a></li>
+                <li class="navItems"><a href="DmwqmfColumnsS21.html">| Skills</a></li>
+            </ul>
+        </div>
+        
+        
+        
+        <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header -->
+        <div id="mainWrapper" class="clearHack">
+            <h1 class="headerSkills">Skills</h1>
+            
+            <!-- Left Column -->
+            <!-- Put left column physical width calculations here: 
+
+               Physical Width = 
+
+                244px -> content width
+               + 42px -> padding (21px left, 21px right)
+               + 12px -> border (6px left, 6px right)
+               + 42px -> margin (21px left, 21px right)
+             ______________
+              = 340px
+            -->
+            
+            <div class="leftColumn">
+                <h3>Course Work</h3>
+                <hr>
+                    <ul>
+                        <li>Digital Media Design</li>
+                        <li>Object Oriented Programming</li>
+                        <li>Web Development I</li>
+                        <li>Computer Networking</li>
+                    </ul>
+            </div>
+            
+            <!-- Row Wrapper. This div will contain two rows -->
+            <!--Put middle column physical width calculations here:
+
+                Physical Width = 
+
+                435px -> content width
+              +  42px -> padding (21px left, 21px right)
+             ______________
+              = 477px
+            -->
+            
+            <div class="rowWrapper">
+                
+                <div class="topRow">
+                    <h3>Languages</h3>
+                    <hr>
+                        <ul>
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>C#</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                </div>
+                
+                
+                <div class="bottomRow">
+                    <h3>Other</h3>
+                    <hr>
+                        <ul>
+                            <li>Peer Learning Assistant - Mizzou</li>
+                        </ul>
+                </div>    
+            </div>
+            
+            <!-- Right Column -->
+            <!--Put right column physical width calculations here: 
+    
+                Physical Width = 
+                209px -> content width
+               + 42px -> padding (21px left, 21px right)
+               + 12px -> border (6px left, 6px right)
+               + 42px -> margin (21px left, 21px right)
+              ______________
+                305px
+            -->
+            <div class="rightColumn">
+                <h3>Activities</h3>
+                <hr>
+                    <ul>
+                        <li>Missouri Evans Scholars</li>
+                        <li>Mizzou - NSBE</li>
+                        <li>Mizzou - NAACP</li>
+                    </ul>
+            </div>
+            
+        </div>
+        
+        <h2>Last updated by Destiny Ward at Feburary 6, 2021</h2>
+        
+    </body>
+</html>

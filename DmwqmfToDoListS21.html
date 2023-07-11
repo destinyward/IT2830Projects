@@ -1,0 +1,223 @@
+<!-- 
+    Name: Destiny Ward
+    Pawprint: Dmwqmf
+    Date: March 2, 2021
+    Challenge: To-Do List S21
+-->
+<!DOCTYPE html>
+
+<!-- 
+    References: 
+        1) Theme Button: https://www.w3schools.com/css/css3_buttons.asp
+        2) JavaScript Switch Statement: https://www.w3schools.com/js/js_switch.asp
+        3) JavaScript HTML DOM EventListener: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+        4) Check Icon: https://fontawesome.com/icons/check?style=solid
+        5) Dark Mode: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_dark_mode
+        6) 
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="DmwqmfToDoListS21.css">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
+        
+        <title>To-Do List</title>    
+    </head>
+    
+    <body>
+
+    <a href="DmwqmfProjectsS21.html"><h2>Back to Projects</h2></a>
+
+    <button class="theme-button" onclick="myFunction()">Theme</button>
+    
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+    </script>
+    
+    <h2 class="list-center">Destiny's Task To-Do List</h2>
+
+    <div id="todoElements" class="clear">
+        <ul id="topElements">
+            <li>
+                <div class="grid-layout">
+                    <h5>Title</h5>
+                    <h5>Type</h5>
+                    <h5>Priority</h5>
+                    <h5>Date</h5>
+                    <h5>Action</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+        
+        
+    <div class="info-container clear">
+        <form id="formElements">
+            <p class="task-title">Add a To-Do Task</p>
+    
+            <input type="text" name="title" id="titleInfo" class="taskElements" placeholder="Title">
+                
+            <select name="type" id="typeInfo" class="taskElements">
+                <option value="N/A">Select Type</option>
+                <option value="Homework">Homework</option>
+                <option value="Notes">Notes</option>
+                <option value="Quiz">Quiz</option>
+                <option value="Test">Test</option>
+                <option value="Other">Other</option>
+            </select>
+                
+            <label for="range">Priority:</label>
+            <input type="range" id="priorityInfo" name="priorityInfo" class="taskElements" min="0" max="6" onchange="updateTextInput(this.value);">
+                
+            <input type="date" name="date" class="taskE" id="dateInfo" placeholder="Date">
+                
+            <button type="button" id="addInfo" onclick="addElement()" class="taskElements center-button">Add Task</button>
+
+    
+            <button type="button" id="clearInfo" onclick="clearElement()" class="taskElements center-button">Clear Form</button>
+        </form>
+    </div>
+        <script>
+            var a = 0;
+            
+            function removeList(id){
+                $("." + String(id)).remove();
+            }
+            
+            
+            function addElement(){
+                a++;
+                console.log("Test");
+                var titleInfo = $("#titleInfo").val();
+                var typeInfo = $("#typeInfo").val();
+                var priorityInfo = $("#priorityInfo").val();
+                var dateInfo = $("#dateInfo").val();
+                
+                var realList= document.getElementById("topElements");
+                
+                var list = document.createElement("li");
+                list.classList.add(String(a));
+                
+                var div = document.createElement("div");
+                div.style = "#grid.layout";
+                
+                var title = document.createElement("h5");
+                var type = document.createElement("h5");
+                var priority = document.createElement("h5");
+                var date = document.createElement("h5");
+                var actionButton = document.createElement("h5");
+                
+                actionButton.addEventListener("click", function (){
+                    removeList(a);
+                });
+                
+                
+                switch (Number(priorityInfo)){
+                    case 0:
+                        priorityInfo = "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        break;
+                        
+                    case 1:
+                        priorityInfo = "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        break;
+                        
+                    case 2:
+                        priorityInfo = "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        break;
+                        
+                    case 3:
+                        priorityInfo = "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        break;
+                        
+                    case 4: 
+                        priorityInfo = "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        break;
+                        
+                    case 5: 
+                        priorityInfo = "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='far fa-star'></i>";
+                        break;
+                        
+                    case 6:
+                        priorityInfo = "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        priorityInfo += "<i class='fas fa-star'></i>";
+                        
+                        
+                        
+                    default:
+                        priorityInfo = "None";
+                }
+                
+                $(title).html(titleInfo);
+                div.appendChild(title);
+                
+                $(type).html(typeInfo);
+                div.appendChild(type);
+                
+                $(priority).html(priorityInfo);
+                div.appendChild(priority);
+                
+                $(date).html(dateInfo);
+                div.appendChild(date);
+                
+                $(actionButton).html('<i class="fas fa-check" aria-hidden="true"></i>');
+                div.appendChild(actionButton);
+                
+                list.appendChild(div);
+                realList.appendChild(list);
+                
+            }
+            
+            function clearElement(){
+                $("#titleInfo").val("");
+                $("#typeInfo").val("type");
+                $("#priorityInfo").val("0");
+                $("#dateInfo").val("");
+            }
+        </script>
+    
+    </body>
+</html>

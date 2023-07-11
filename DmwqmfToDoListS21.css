@@ -1,0 +1,131 @@
+@font-face {
+    font-family: toDoList;
+    src: url(Signika/Signika-VariableFont_wght.ttf)
+        
+}
+
+body {
+    background-color: sandybrown;
+    font-family: toDoList, "Signika", fantasy;
+    overflow-x: hidden;
+    color: white;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    
+}
+
+.clear:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#grid-layout{
+    display: grid; 
+    grid-gap: 15%;
+}
+
+ul{
+    list-style: none;
+}
+
+#todoElements{
+    display: flex;
+    background-color: burlywood;
+    border: 3px solid black;
+    height: 400px;
+    padding: 10px;
+    margin: 50px;
+    width: 80%;
+    margin: auto;
+    overflow: scroll;
+
+}
+
+#topElements{
+    width: 90%;
+}
+
+.list-center {
+    text-align: center;
+}
+
+h5{
+ display: inline-flex;
+    width: 0;
+    margin-right: 10%;
+    margin-left: 9%;
+    font-size: 15px;
+    
+}
+
+.info-container {
+    display: flex;
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    border: 3px solid black;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#formElements {
+    width: 100%;
+    padding: 0px;
+    margin-left: 3%;
+    margin-right: auto;
+}
+
+.task-title {
+    text-align: center;
+}
+
+.taskElements{
+    text-align: center;
+    margin: 1%;
+    width: 20%;
+    
+}
+
+.center-button {
+    margin-left: 20%;
+    
+}
+
+.theme-button{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  font-family: toDoList, "Signika", fantasy;
+  font-weight: bold;
+  background-color: #666;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.theme-button:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.dark-mode {
+  background-color: saddlebrown;
+  color: black;
+  
+}
+
+.dark-mode a {
+  color: black;
+}

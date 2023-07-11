@@ -1,0 +1,187 @@
+<!-- 
+    Name: Destiny Ward
+    Pawprint: Dmwqmf
+    Date: February 13, 2021
+    Challenge: Tables S21
+-->
+<!DOCTYPE html>
+
+<!-- 
+    References: 
+        1) Bootstrap CSS: https://getbootstrap.com/docs/4.0/getting-started/introduction/#css
+        2) University of Missouri-Columbia BS IT Information: http://catalog.missouri.edu/undergraduategraduate/
+           collegeofengineering/informationtechnology/bs-information-technology/
+        3) Bootstrap Card: https://getbootstrap.com/docs/4.0/components/card/
+        4) Mizzou Tiger Picture: 
+        5) Python Logo Picture: https://content.techgig.com/5-tips-for-python-programmers-to-help-them-improve/articleshow/69595470.cms
+        6) Bootstrap Containers: https://getbootstrap.com/docs/4.0/layout/overview/#containers
+-->
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Courses</title>
+        
+        <!-- Copied link from Bootstrap CSS, link: https://getbootstrap.com/docs/4.0/getting-started/introduction/#css-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <!-- End of copied link from Bootstrap CSS, link: https://getbootstrap.com/docs/4.0/getting-started/introduction/#css -->
+        
+        <link rel="stylesheet" href="DmwqmfTables21.css">
+        </head>
+    
+    <body>
+        
+            <ul>
+              <li><a href="DmwqmfPortfolioS21.html">Destiny Ward</a></li>
+              <li><a href="DmwqmfColumnsS21.html">Skills</a></li>
+              <li><a href="#Courses">Courses Taken</a></li>
+            </ul>
+        
+    <table class="table">
+        <thead>
+             <tr>
+                <th colspan="7">Ward's Course History</th>
+            </tr>
+
+            <tr>
+                <th colspan="7">
+                    <img class="tiger" src="DmwqmfTables21MUTiger.png" alt="MizzouTiger">
+                     University of Missouri-Columbia
+                    <img class="tiger" src="DmwqmfTables21MUTiger.png" alt="MizzouTiger">
+                </th>
+                    
+            </tr>
+            
+            <tr>
+                <th>Department</th>
+                <th>Course</th>
+                <th>Course #</th>
+                <th>Description</th>
+                <th>Professor</th>
+                <th>Grade</th>
+                <th>Units</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+
+                <tr>
+                    <th class="boxIT" rowspan="3">Information Technology</th>
+                    <th>Introduction to Problem Solving and Programming</th>
+                    <th>INFOTC 1040</th>
+                    <!-- Copied from University of Missouri-Columbia BS Information Technology (for educational purposes), link: http://catalog.missouri.edu/undergraduategraduate/collegeofengineering/informationtechnology/bs-information-technology/ -->
+                    <th>An introduction to problem solving methods and programming concepts, providing experience 
+                    in designing, developing, implementing, and testing programs.</th>
+                    <!-- End of copy from University of Missouri-Columbia BS Information Technology -->
+                    <th>Dale Musser</th>
+                    <th>A</th>
+                    <th>3</th>
+                </tr>
+
+                <tr>
+                    <th>Introduction to Digital Media Design</th>
+                    <th>INFOTC 1610</th>
+                    <!-- Copied from University of Missouri-Columbia BS Information Technology (for educational purposes), link: http://catalog.missouri.edu/undergraduategraduate/collegeofengineering/informationtechnology/bs-information-technology/ -->
+                    <th>Introduction to the concepts and practices of audio design, graphic design, motion media design and basic video editing.</th>
+                    <!-- End of copy from University of Missouri-Columbia BS Information Technology -->
+                    <th>Chip Gubera</th>
+                    <th>A</th>
+                    <th>3</th>
+                </tr>
+                
+                <tr>
+                    <th>Programming Languages and Paradigms</th>
+                    <th>INFOTC 2040</th>
+                    <!-- Copied from University of Missouri-Columbia BS Information Technology (for educational purposes), link: http://catalog.missouri.edu/undergraduategraduate/collegeofengineering/informationtechnology/bs-information-technology/ -->
+                    <th>Implement algorithms and data structures to solve problems while utilizing paradigms offered by the programming languages such as procedural, object-oriented, protocol-oriented, functional, and declarative.</th>
+                    <!-- End of copy from University of Missouri-Columbia BS Information Technology -->
+                    <th>Dale Musser</th>
+                    <th>B+</th>
+                    <th>3</th>
+                </tr>
+
+                <tr>
+                    <th class="boxCS">Computer Science</th>
+                    <th>Web Application Development I</th>
+                    <th>CS 2830</th>
+                    <!-- Copied from University of Missouri-Columbia BS Information Technology (for educational purposes), link: http://catalog.missouri.edu/undergraduategraduate/collegeofengineering/informationtechnology/bs-information-technology/ -->
+                    <th>Comprehensive understanding of the evolution, the technologies, and the tools of the Internet. </th>
+                    <!-- End of copy from University of Missouri-Columbia BS Information Technology -->
+                    <th>Nick Wergeles</th>
+                    <th>N/A</th>
+                    <th>3</th>
+                </tr>
+
+                <tr>
+                    <th class="boxMath">Mathamatics</th>
+                    <th>Introduction to Probability and Statistics I</th>
+                    <th>STATS 2500</th>
+                    <!-- Copied from University of Missouri-Columbia BS Information Technology (for educational purposes), link: http://catalog.missouri.edu/undergraduategraduate/collegeofengineering/informationtechnology/bs-information-technology/ -->
+                    <th>Descriptive statistics, probability, random variables, sampling distributions, 
+                        estimation, confidence intervals, hypothesis tests.</th>
+                    <!-- End of copy from University of Missouri-Columbia BS Information Technology -->
+                    <th>Teri Christiansen</th>
+                    <th>N/A</th>
+                    <th>3</th>
+                </tr>
+            </tbody>
+    </table>
+        
+    <div class=".mainWrapper clearHack">
+        
+        <!-- All containers have the same physical column calculations
+    
+                Physical Width = 
+                  23vw -> content width
+               +   0px -> padding (0px left, 0px right)
+               +    2% -> margin
+               + 108px -> margin-left
+               +  auto -> margin-right
+               
+            -->  
+    <!-- Start of Bootstrap container link: https://getbootstrap.com/docs/4.0/layout/overview/#containers --> 
+    <div class="card container"> 
+    <!-- End of Bootstrap container link: https://getbootstrap.com/docs/4.0/layout/overview/#containers -->  
+        <img class="card-img-top" src="DmwqmfTables21PersonalImage.jpg" alt="Card One Image">
+        <div class="card-body">
+        <h2 class="card-title">Destiny Ward</h2>
+        <p class="card-text">Sophomore in Information Technology with 46 credit hours<br>Email: destiny.ward03@gmail.com</p>
+    </div>
+    </div>
+    
+    <!-- Start of Bootstrap container link: https://getbootstrap.com/docs/4.0/layout/overview/#containers -->  
+    <div class="card container">
+    <!-- End of Bootstrap container link: https://getbootstrap.com/docs/4.0/layout/overview/#containers -->  
+        <div class="card-body">
+        <h2 class="card-title">Languages</h2>
+        <hr>
+            <p>Python<p>
+            <p>C<p>
+            <p>C#<p>
+            <p>HTML<p>
+    </div>
+    </div>
+    <!-- Start of Bootstrap card source, link: https://getbootstrap.com/docs/4.0/components/card/-->
+    <!-- Start of Bootstrap container source, link: https://getbootstrap.com/docs/4.0/layout/overview/#containers --> 
+    <div class="card container">
+    <!-- End of Bootstrap container, link: https://getbootstrap.com/docs/4.0/layout/overview/#containers -->  
+    <!-- End of Bootstrap card source, link: https://getbootstrap.com/docs/4.0/components/card/-->
+         <img class="card-img-top" src="DmwqmfTables21PythonImage.jpg" alt="Card Three Image">
+        <div class="class-body">
+        <hr>
+        <h2 class="card-title">Projects</h2>
+    
+            <p><!-- Copied information from https://skillcrush.com/blog/what-is-python-used-for/ for educational purposes only-->Python is a general-purpose coding language—which means that, unlike HTML, CSS, and JavaScript, it can be used for other types of programming and software development besides web development.<!-- End of copied information from https://skillcrush.com/blog/what-is-python-used-for/--><br>Using Python, I created a sales receipt estimator. Depending on the supply aisle, the cost of items, and the quantity of items, an estimate was generated before checking items out.</p>
+      
+        </div>
+        
+        
+    </div>
+        
+        </div>
+        
+        <h2 class="font">Last updated by Destiny Ward at Feburary 6, 2021</h2>
+    </body>
+</html>

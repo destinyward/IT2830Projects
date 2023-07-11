@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, Helventica, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+    background-color: lightgoldenrodyellow;
+    } 
+            
+ul   {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: goldenrod;
+    font-size: 25px;
+    width: 110%;
+    }
+
+li {
+    float: left;
+    }
+
+li a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    }
+
+li a: hover {
+    background-color: lightgrey;
+    }
+
+.tiger {
+    height: 100px;
+    }   
+
+
+.table {
+    vertical-align: baseline;
+}
+
+
+.title {
+    text-align: center;
+}
+
+.boxIT {
+    background-color: goldenrod;
+}
+
+.boxCS {
+    background-color: lightgrey;
+}
+
+.boxMath {
+    background-color: grey;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Signika/Signika-VariableFont_wght.ttf)
+}
+
+tr {
+    font-family: myFirstFont, "Signika", fantasy;
+}
+
+.mainWrapper {
+    display: block;
+    width: 85%;
+    text-align: center;
+}
+
+.clearHack: after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.card {
+    float: left;
+}
+
+.card-img-top {
+    width: auto;
+    margin: 2%;
+    
+}
+
+.card-title {
+    text-align: left;
+    font-size: 25px;
+}
+
+card-body {
+    width: 0;
+    padding: 0;
+    height: 100px;
+    text-align: left;
+                
+    float: left;
+}
+
+.card-text {
+    text-align: left;
+}
+
+
+.container {
+    text-align: center;
+    height: auto;
+    margin: 2%;
+    margin-right: auto;
+    margin-left: 108px;
+    padding: 0px;
+    width: 23vw;
+    box-shadow: 5px 10px;
+    background-color: lightgray;
+    font-family: myFirstFont, "Signika", fantasy;
+}
+
+.table-header {
+    font-size: bold 25px;
+}
+
